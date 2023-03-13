@@ -69,28 +69,22 @@ img {
 
 
 
-
 .menu-container {
 	display: grid;
+	transform: scale(1);
+	transition: transform .4s;
 }
 .container-menu-pizzas, .container-menu-hamburguesas, 
 .container-menu-complementos, .container-menu-bebidas,
 .container-menu-especial {
 	margin: 10px 0;
-	transition-timing-function: ease-out;
 	transition: width .3s, height .5s;
   width: 99%;
 	height: 465px;
 	overflow: hidden;
 	display: flex;
-	order: 20;
 }
 
-.container-menu-pizzas {
-
-}
-.container-menu-hamburguesas {
-}
 
 .ul-menu-food {
 	list-style: none;
@@ -103,16 +97,13 @@ img {
 	grid-template-columns: 1fr 1fr;
 }
 
-.container-menu-especial {
-	width: 100%;
-}
-
-
-
 .abrir {
 	height: calc(2 * 470px);
 }
 
+.h4-menu {
+	font-size: 30px;
+}
 
 
 .li-menu-item {
@@ -146,8 +137,6 @@ img {
 }
 
 
-
-
 .img-menu-item {
 	cursor: pointer;
 	height: 250px;
@@ -156,9 +145,35 @@ img {
 	border-radius: 10px;
 }
 
-.menu-bebidas {
-	margin: 20px;
+
+.close-menu {
+	transform: scale(0);
+	position: absolute;
 }
+.menu-carta-container {
+	transform: scale(0);
+	transition: transform .35s;
+}
+.menu-carta-on {
+	transform: scale(1.0);
+}
+
+.btn-switch-menu {
+	background: #666;
+	border: none;
+	padding: 20px;
+	margin: 30px 10px;
+	color: #fff;
+	transition: transform .5s, background .3s;
+}
+.btn-switch-menu:active {
+	background: #333;
+	transform: scale(.9);
+}
+
+
+
+
 .location-container {
 	margin: 30px auto;
 	height: 900px;
