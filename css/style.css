@@ -1,0 +1,298 @@
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 22px;
+	background-color: #252525;
+	color: #fff;
+	font-family: 'Sen', sans-serif;
+	text-align: center;
+}
+
+h2 {
+	font-size: ;
+}
+h3 { 
+	font-size: ;
+}
+
+h4 {
+	font-size: ;
+	padding: 30px;
+}
+
+p {
+	font-size: ;
+	text-align: center;
+}
+
+section {
+	margin: 10px auto;
+}
+
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+
+.nav-header {
+	display: none;
+}
+
+
+.img-logo-container {
+	height: 180px;
+}
+.img-logo {
+}
+
+
+.inicio {
+	display: flex;
+	text-align: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.menu-info {
+	padding: 20px;
+}
+
+
+
+
+.menu-container {
+	outline: 2px solid red;
+	display: flex;
+	flex-wrap: wrap;
+}
+.container-menu-comidas, .container-menu-bebidas {
+	margin: 10px 0;
+	transition-timing-function: ease-out;
+	transition: width .5s, height .5s;
+  width: 50%;
+	height: 450px;
+	overflow: hidden;
+	display: flex;
+}
+.container-menu-comidas {
+	border: 2px solid yellow;
+}
+.container-menu-bebidas {
+	border: 2px solid white;
+}
+
+.ul-menu-food {
+	border: 3px solid blue;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(min-content, max-content);
+	grid-auto-rows: minmax(min-content, max-content);
+	place-items: center;
+	gap: 10px;
+}
+
+.abrir {
+	width: 100%;
+	height: calc(3 * 420px);
+}
+.abrir > ul  {
+	grid-template-columns: 1fr 1fr;
+}
+.abrir > ul > .switch-food  {
+	grid-column: 1 / 3;
+}
+
+.li-menu-item {
+	background-color: #333;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	width: 93%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 350px;
+	margin: 10px;
+}
+.switch-food {
+	border: 3px solid red;
+}
+
+.menu-item-description {
+	margin: 20px 0;
+}
+
+.menu-item-price::before {
+	content: "$100";
+	font-size: 2em;
+	color: #efdfaf;
+	margin-top: -10px;
+}
+
+
+
+
+.img-menu-item {
+	cursor: pointer;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.menu-bebidas {
+	margin: 20px;
+}
+.location-container {
+	margin: 30px auto;
+	height: 900px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.location {
+	width: 80%;
+	height: 80%;
+	outline: 8px solid #900;
+}
+
+
+
+	section#contacto p {
+		font-size: 1.2em;
+	}
+
+	footer {
+		background-color: #000;
+		color: #fff;
+		padding: 20px;
+		text-align: center;
+	}
+
+	footer p {
+		margin: 0;
+	}
+
+
+      /* Estilo del modal */
+      #modal {
+        display: none; /* El modal se oculta por defecto */
+        position: fixed; /* Posición fija para cubrir toda la pantalla */
+        z-index: 1; /* El modal debe estar por encima de todo el contenido */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Para permitir el desplazamiento en pantallas pequeñas */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semitransparente */
+        justify-content: center;
+        align-items: center;
+      }
+      
+      /* Estilo de la imagen dentro del modal */
+      #modal-imagen {
+        display: block; /* Asegurar que la imagen se muestre como un bloque */
+        margin: 0 auto; /* Centrar la imagen horizontalmente */
+        max-width: 90%; /* Establecer el ancho máximo de la imagen */
+        max-height: 80%; /* Establecer la altura máxima de la imagen */
+      }
+      
+      /* Estilo del botón para cerrar el modal */
+      .modal-cerrar {
+        color: #fff; /* Color del botón */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+      }
+      
+      /* Estilo del fondo difuminado */
+      .modal-fondo {
+        filter: blur(5px); /* Aplicar efecto de desenfoque */
+        -webkit-filter: blur(5px);
+        position: fixed;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semitransparente */
+      }
+
+
+
+/* Elemento base */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Carril */
+::-webkit-scrollbar-track {
+  background: #29002b;
+  border-radius: 50px
+}
+ 
+/* Manejador */
+::-webkit-scrollbar-thumb {
+  background: #7b00ff;
+  border-radius: 50px;
+}
+
+/* Manejador hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8f51d1;
+}
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+	
+
+	.header-menu {
+		background-color: #000;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 20px 10px;
+	}
+
+	.nav-header {
+		display: block;
+		width: 100%;
+	}
+	.nav-ul {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#inicio {
+		margin-top: 180px;
+	}
+}
+

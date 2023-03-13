@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+   <meta charset="utf-8">
+   <meta name="keywords" content="Pizza,pizza,2023,Atlixco,atlixco, Tepeojuma, Tepeojuma, Men, menu">
+   <meta name="Invitacion Boda" content="Los esperamos en este dia especial">
+   <meta name="author" content="Red">
+   <meta name="copyright" content="mio.XD">
+   <meta name="robots" content="index">
+   <link rel="icon" href="multimedia/images/Fani-y-Migue.ico">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" href="css/icofont.min.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet"> 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/28faa9840b.js" crossorigin="anonymous"></script>
+    <title>Zuizo`z Pizza</title>
+</head>
+<body class="body " >
+   <header class="header-menu">
+		<nav class="nav-header">
+			<ul class="nav-ul">
+				<li><a href="#inicio">Inicio</a></li>
+				<li><a href="#menu">Menú</a></li>
+				<li><a href="#ubicacion">Ubicación</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+   	<div class="img-logo-container">
+   		<img class="img-logo" src="multimedia/images/Zuizoz-logo-01.png">
+   	</div>
+		<section id="inicio">
+			<div class="inicio">
+				<p>En nuestro restaurante ofrecemos una amplia variedad de alimentos.</p>
+			</div>
+		</section>
+		<section id="menu">
+			<div class="menu-info">
+				<h2>Menú</h2>
+			</div>
+			<div class="menu-container">
+				<div class="container-menu-comidas" >
+					<ul class="ul-menu-food">
+						<li class="li-menu-item switch-food" onclick="abrir()">
+							<img class="img-menu-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXnt0wOSNXar_hcWRJ40vnHleNqrxN5PSHRQ&usqp=CAU" alt="Pozole">
+							<h4>Comida</h4>
+							<span class="menu-item-price"></span>
+							<p class="menu-item-description">Descripcion.</p>
+						</li>
+						<li class="li-menu-item">
+							<img class="img-menu-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXnt0wOSNXar_hcWRJ40vnHleNqrxN5PSHRQ&usqp=CAU" alt="Pozole">
+							<h4>Comida</h4>
+							<span class="menu-item-price"></span>
+							<p class="menu-item-description">Descripcion.</p>
+						</li>
+						<li class="li-menu-item">
+							<img class="img-menu-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXnt0wOSNXar_hcWRJ40vnHleNqrxN5PSHRQ&usqp=CAU" alt="Pozole">
+							<h4>Comida</h4>
+							<span class="menu-item-price"></span>
+							<p class="menu-item-description">Descripcion.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="container-menu-bebidas">
+					<ul class="ul-menu-food">
+						<li class="li-menu-item"> 
+							<img class="img-menu-item" src="https://orvallocafe.com/assets/images/public_images/sodait.jpeg" alt="Agua fresca de jamaica">
+							<h4>Bebida</h4>
+							<span class="menu-item-price"></span>
+							<p class="menu-item-description">Descripcion.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="container-menu-bebidas">
+					<ul class="ul-menu-food">
+						<li class="li-menu-item"> 
+							<img class="img-menu-item" src="https://orvallocafe.com/assets/images/public_images/sodait.jpeg" alt="Agua fresca de jamaica">
+							<h4>Bebida</h4>
+							<span class="menu-item-price"></span>
+							<p class="menu-item-description">Descripcion.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		<!-- Modal -->
+	    <div id="modal">
+	      <div class="modal-fondo"></div> <!-- Fondo difuminado -->
+	      <span class="modal-cerrar" onclick="cerrarModal()">&times;</span> <!-- Botón para cerrar el modal -->
+	      <img class="img-menu-item" id="modal-imagen" src="">
+	    </div>
+		</section>
+		<section id="ubicacion">
+			<h2>Ubicación</h2>
+			<p>Estamos ubicados en : </p>
+			<div class="location-container">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.16325815480474!2d-98.4548091137743!3d18.726175473212464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfac90e5a80c33%3A0x1a44799924b71b58!2sSuizoz%20Pizza!5e0!3m2!1ses-419!2smx!4v1678408276717!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</section>
+		<section id="contacto">
+			<h2>Contacto</h2>
+			<p>Puedes contactarnos por teléfono al 555-555-5555</p>
+			<p>por correo electrónico a @gmail.com</p>
+			<p>o visitando nuestras pagina de facebook: '  '</p>
+		</section>
+	</main>
+    <script src="js/modal-script.js"></script>
+<!----======== JS ======== -->
+   <script src="js/open-menu__script.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init({
+         duration: 800
+      });
+   </script>
+<!----======== JS ======== -->
+</body>
+</html>
