@@ -18,8 +18,8 @@ h3 {
 }
 
 h4 {
-	font-size: ;
-	padding: 30px;
+	font-size: 18px;
+	padding: 20px;
 }
 
 p {
@@ -71,63 +71,67 @@ img {
 
 
 .menu-container {
-	outline: 2px solid red;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
 }
-.container-menu-comidas, .container-menu-bebidas {
+.container-menu-pizzas, .container-menu-hamburguesas, 
+.container-menu-complementos, .container-menu-bebidas,
+.container-menu-especial {
 	margin: 10px 0;
 	transition-timing-function: ease-out;
-	transition: width .5s, height .5s;
-  width: 50%;
-	height: 450px;
+	transition: width .3s, height .5s;
+  width: 99%;
+	height: 465px;
 	overflow: hidden;
 	display: flex;
+	order: 20;
 }
-.container-menu-comidas {
-	border: 2px solid yellow;
+
+.container-menu-pizzas {
+
 }
-.container-menu-bebidas {
-	border: 2px solid white;
+.container-menu-hamburguesas {
 }
 
 .ul-menu-food {
-	border: 3px solid blue;
 	list-style: none;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: minmax(min-content, max-content);
 	grid-auto-rows: minmax(min-content, max-content);
 	place-items: center;
-	gap: 10px;
-}
-
-.abrir {
-	width: 100%;
-	height: calc(3 * 420px);
-}
-.abrir > ul  {
+	gap: 6px;
 	grid-template-columns: 1fr 1fr;
 }
-.abrir > ul > .switch-food  {
-	grid-column: 1 / 3;
+
+.container-menu-especial {
+	width: 100%;
 }
+
+
+
+.abrir {
+	height: calc(2 * 470px);
+}
+
+
 
 .li-menu-item {
 	background-color: #333;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	padding: 10px;
-	width: 93%;
+	width: 98%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 350px;
-	margin: 10px;
+	margin: 8px;
 }
-.switch-food {
-	border: 3px solid red;
+.switch-food, .switch-ham, .switch-com
+, .switch-beb, .switch-esp {
+	grid-column: 1 / 3;
+	height: 450px;
 }
 
 .menu-item-description {
@@ -136,7 +140,7 @@ img {
 
 .menu-item-price::before {
 	content: "$100";
-	font-size: 2em;
+	font-size: 25px;
 	color: #efdfaf;
 	margin-top: -10px;
 }
@@ -146,7 +150,7 @@ img {
 
 .img-menu-item {
 	cursor: pointer;
-	height: 200px;
+	height: 250px;
 	width: 100%;
 	object-fit: cover;
 	border-radius: 10px;
