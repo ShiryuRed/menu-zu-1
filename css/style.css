@@ -6,8 +6,9 @@ body {
 	font-size: 22px;
 	background-image: url("../multimedia/images/de.png");
 	background-position: center;
-	background-color: #000;
-	color: #fff;
+	background-color: #111;
+	background-attachment: fixed;
+	color: #dbeffe;
 	font-family: 'Sen', sans-serif;
 	text-align: center;
 }
@@ -110,7 +111,7 @@ img {
 
 
 .li-menu-item {
-	background-color: #333;
+	background-color: #0008;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	padding: 10px;
@@ -121,6 +122,8 @@ img {
 	align-items: center;
 	min-height: 350px;
 	margin: 8px;
+	border: 2px solid #be1704;
+	color: #fff;
 }
 .switch-food, .switch-ham, .switch-com
 , .switch-beb, .switch-esp {
