@@ -80,7 +80,7 @@ img {
 	margin: 10px 0;
 	transition: width .3s, height .5s;
   width: 99%;
-	height: 465px;
+	height: 485px;
 	overflow: hidden;
 	display: flex;
 }
@@ -98,11 +98,12 @@ img {
 }
 
 .abrir {
-	height: calc(3 * 470px);
+	height: calc(2.5 * 470px);
 }
 
 .h4-menu {
 	font-size: 30px;
+	padding: 20px 0 00px 0;
 }
 
 
@@ -122,7 +123,7 @@ img {
 .switch-food, .switch-ham, .switch-com
 , .switch-beb, .switch-esp {
 	grid-column: 1 / 3;
-	height: 450px;
+	height: 470px;
 }
 
 .menu-item-description {
@@ -130,7 +131,7 @@ img {
 }
 
 .menu-item-price::before {
-	content: "$100";
+	content: "G $100";
 	font-size: 25px;
 	color: #efdfaf;
 	margin-top: -10px;
@@ -175,35 +176,30 @@ img {
 
 
 .location-container {
-	margin: 30px auto;
-	height: 900px;
+	margin: 35px 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: 4px double red;
 }
 
 .location {
 	width: 80%;
 	height: 80%;
-	outline: 8px solid #900;
 }
 
 
 
-	section#contacto p {
-		font-size: 1.2em;
-	}
+.contacto {
+	border: 2px solid red;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
 
-	footer {
-		background-color: #000;
-		color: #fff;
-		padding: 20px;
-		text-align: center;
-	}
-
-	footer p {
-		margin: 0;
-	}
+footer p {
+	margin: 0;
+}
 
 
       /* Estilo del modal */
