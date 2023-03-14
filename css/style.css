@@ -130,6 +130,12 @@ img {
 , .switch-beb, .switch-esp {
 	grid-column: 1 / 3;
 	height: 470px;
+	transition: transform .4s, background .5s;
+}
+.switch-food:active, .switch-ham:active, .switch-com
+, .switch-beb:active, .switch-esp:active {
+	transform: scale(.9);
+	background-color: #000e;
 }
 
 .menu-item-description {
@@ -137,7 +143,7 @@ img {
 }
 
 .menu-item-price::before {
-	content: "G $100";
+	content: "G $160";
 	font-size: 25px;
 	color: #efdfaf;
 	margin-top: -10px;
