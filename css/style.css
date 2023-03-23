@@ -30,6 +30,11 @@ p {
 	text-align: center;
 }
 
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
 section {
 	margin: 10px auto;
 }
@@ -164,19 +169,20 @@ img {
 	color: #d00;
 }
 .abrir-pizza {
-	height: calc(4 * 420px);
+	height: calc(12.5 * 420px);
+	overflow: visible;
 }
 .abrir-pizza-calzone {
 	height: calc(5.38 * 420px);
 }
 .abrir-hamburguesas {
-	height: calc(2 * 470px);
+	height: calc(4 * 470px);
 }
 .abrir-complementos {
-	height: calc(2 * 470px);
+	height: calc(4 * 470px);
 }
 .abrir-bebidas {
-	height: calc(2 * 470px);
+	height: calc(4 * 470px);
 }
 .abrir-especiales {
 	height: calc(2 * 470px);
@@ -213,7 +219,22 @@ img {
 	background: #999;
 	color: #ddd;
 }
-
+.to-up-pizza {
+	content: "s";
+	background: #000d;
+	position: sticky;
+	top: 0%;
+	grid-column: 1/3;
+	padding: 10px 14px;
+	border-radius: 100%;
+	transition: transform .3s;
+}
+.to-up-pizza:active {
+	transform: scale(.7);
+}
+.fa-angles-up {
+	font-size: 30px;
+}
 
 
 .li-menu-item {
