@@ -169,11 +169,11 @@ img {
 	color: #d00;
 }
 .abrir-pizza {
-	height: calc(12.5 * 420px);
+	height: calc(13.64 * 420px);
 	overflow: visible;
 }
 .abrir-pizza-calzone {
-	height: calc(5.38 * 420px);
+	height: calc(15.1 * 420px);
 }
 .abrir-hamburguesas {
 	height: calc(4 * 470px);
@@ -182,10 +182,10 @@ img {
 	height: calc(4 * 470px);
 }
 .abrir-bebidas {
-	height: calc(4 * 470px);
+	height: calc(4.3 * 470px);
 }
 .abrir-especiales {
-	height: calc(2 * 470px);
+	height: calc(4.3 * 470px);
 }
 
 .h4-menu {
@@ -255,6 +255,9 @@ img {
 	min-width: 80vw;
 	height: 98%;
 }
+.arma-tu-pizza {
+	grid-column: 1 / 3;
+}
 .switch-food, .switch-ham, .switch-com
 , .switch-beb, .switch-esp {
 	grid-column: 1 / 3;
@@ -278,7 +281,7 @@ img {
 	margin-top: -10px;
 }
 
-
+/* Price */
 .calzone-price::before {
 	content: "$150";
 }
@@ -292,7 +295,79 @@ img {
 	content: "CH $120";
 }
 
+.hamburguesa-res-price::before {
+	content: "$60";
+}
+.hamburguesa-pollo-price::before {
+	content: "$70";
+}
+.estilo-suizo-price::before {
+	content: "$80";
+}
+.hamburguesa-hawaiana-price::before {
+	content: "$70";
+}
+.hamburguesa-doble-price::before {
+	content: "$80";
+}
 
+.nuggets-price:before {
+	content: "$70";
+}
+.wings-price:before {
+	content: "$70";
+}
+.aros-price:before {
+	content: "$70";
+}
+.fries-price:before {
+	content: "$70";
+}
+.nugget-fries-price:before {
+	content: "$70";
+}
+
+.coca-cola-600-price:before {
+	content: "$70";
+}
+.jarritos-600-price:before {
+	content: "$70";
+}
+.boing-price:before {
+	content: "$70";
+}
+.coca-cola-2lts-price:before {
+	content: "$70";
+}
+.jarritos-2lts-price:before {
+	content: "$70";
+}
+.cafe-colombia-price:before {
+	content: "$70";
+}
+
+.sub-price:before {
+	content: "$70";
+}
+.sub-italiano-price:before {
+	content: "$70";
+}
+.hot-dog-price:before {
+	content: "$70";
+}
+.hot-dog-toc-price:before {
+	content: "$70";
+}
+.cheesesteak-price:before {
+	content: "$70";
+}
+/* Price */
+.container-menu-hamburguesas > ul > li:last-child, 
+.container-menu-complementos > ul > li:last-child,
+.container-menu-especial > ul > li:last-child {
+	grid-column: 1 / 3;
+	background: ;
+}
 
 
 
