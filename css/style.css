@@ -71,10 +71,19 @@ img {
 	text-align: center;
 	align-content: center;
 	flex-direction: column;
+	margin: 10px auto;
+}
+.img-menu-item {
+	cursor: pointer;
+	height: 250px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 .menu-info {
 	padding: 20px;
+	margin: 10px auto;
 }
 
 
@@ -177,15 +186,19 @@ img {
 }
 .abrir-hamburguesas {
 	height: calc(4 * 470px);
+	overflow: visible;
 }
 .abrir-complementos {
 	height: calc(4 * 470px);
+	overflow: visible;
 }
 .abrir-bebidas {
 	height: calc(4.3 * 470px);
+	overflow: visible;
 }
 .abrir-especiales {
 	height: calc(4.3 * 470px);
+	overflow: visible;
 }
 
 .h4-menu {
@@ -248,7 +261,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	min-height: 350px;
-	margin: 8px;
+	margin: 8px auto;
 	color: #fff;
 }
 .calzone-item {
@@ -280,6 +293,240 @@ img {
 	color: #efdfaf;
 	margin-top: -10px;
 }
+
+.container-menu-hamburguesas > ul > li:last-child, 
+.container-menu-complementos > ul > li:last-child,
+.container-menu-especial > ul > li:last-child {
+	grid-column: 1 / 3;
+	background: ;
+}
+
+
+
+
+
+.close-menu {
+	transform: scale(0);
+	position: absolute;
+}
+.menu-carta-container {
+	transform: scale(0);
+	transition: transform .35s;
+}
+.menu-carta-on {
+	transform: scale(1.0);
+}
+
+.btn-switch-menu {
+	background: #666;
+	border: none;
+	padding: 20px;
+	margin: 20px 10px;
+	color: #fff;
+	transition: transform .5s, background .3s;
+}
+.btn-switch-menu:active {
+	background: #333;
+	transform: scale(.9);
+}
+
+
+.btn-maps {
+	color: #fff;
+	border: none;
+	padding: 15px;
+	margin: 25px auto;
+	background: #555;
+	transition: transform .3s, background .2s;
+}
+.btn-maps:active {
+	color: #ddd;
+	background: #333;
+	transform: scale(.8);
+}
+
+.location-container {
+	margin: 35px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 4px double red;
+	height: 400px;
+	width: 90%
+}
+
+.location {
+	width: 97%;
+	height: 97%;
+}
+
+
+
+.contacto {
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin: 30px auto;
+}
+.number-phone {
+	color: #48e;
+	font-size: 28px;
+}
+
+footer p {
+	margin: 0;
+}
+
+
+      /* Estilo del modal */
+      #modal {
+        display: none; /* El modal se oculta por defecto */
+        position: fixed; /* Posición fija para cubrir toda la pantalla */
+        z-index: 1; /* El modal debe estar por encima de todo el contenido */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Para permitir el desplazamiento en pantallas pequeñas */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semitransparente */
+        justify-content: center;
+        align-items: center;
+      }
+      
+      /* Estilo de la imagen dentro del modal */
+      #modal-imagen {
+        display: block; /* Asegurar que la imagen se muestre como un bloque */
+        margin: 0 auto; /* Centrar la imagen horizontalmente */
+        max-width: 90%; /* Establecer el ancho máximo de la imagen */
+        max-height: 80%; /* Establecer la altura máxima de la imagen */
+      }
+      
+      /* Estilo del botón para cerrar el modal */
+      .modal-cerrar {
+        color: #fff; /* Color del botón */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+      }
+      
+      /* Estilo del fondo difuminado */
+      .modal-fondo {
+        filter: blur(5px); /* Aplicar efecto de desenfoque */
+        -webkit-filter: blur(5px);
+        position: fixed;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semitransparente */
+      }
+
+
+
+/* Elemento base */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Carril */
+::-webkit-scrollbar-track {
+  background: #29002b;
+  border-radius: 50px
+}
+ 
+/* Manejador */
+::-webkit-scrollbar-thumb {
+  background: #7b00ff;
+  border-radius: 50px;
+}
+
+/* Manejador hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8f51d1;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+	
+
+	.header-menu {
+		background-color: #000;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 20px 10px;
+	}
+
+	.nav-header {
+		display: block;
+		width: 100%;
+	}
+	.nav-ul {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#inicio {
+		margin-top: 180px;
+	}
+}
+
+.fa-whatsapp, .fa-facebook {
+	margin: 10px;
+	font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Price */
 .calzone-price::before {
@@ -362,186 +609,3 @@ img {
 	content: "$70";
 }
 /* Price */
-.container-menu-hamburguesas > ul > li:last-child, 
-.container-menu-complementos > ul > li:last-child,
-.container-menu-especial > ul > li:last-child {
-	grid-column: 1 / 3;
-	background: ;
-}
-
-
-
-
-.img-menu-item {
-	cursor: pointer;
-	height: 250px;
-	width: 100%;
-	object-fit: cover;
-	border-radius: 10px;
-}
-
-
-.close-menu {
-	transform: scale(0);
-	position: absolute;
-}
-.menu-carta-container {
-	transform: scale(0);
-	transition: transform .35s;
-}
-.menu-carta-on {
-	transform: scale(1.0);
-}
-
-.btn-switch-menu {
-	background: #666;
-	border: none;
-	padding: 20px;
-	margin: 30px 10px;
-	color: #fff;
-	transition: transform .5s, background .3s;
-}
-.btn-switch-menu:active {
-	background: #333;
-	transform: scale(.9);
-}
-
-
-
-
-.location-container {
-	margin: 35px 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 4px double red;
-	height: 400px;
-}
-
-.location {
-	width: 95%;
-	height: 95%;
-}
-
-
-
-.contacto {
-	color: #fff;
-	padding: 20px;
-	text-align: center;
-}
-
-footer p {
-	margin: 0;
-}
-
-
-      /* Estilo del modal */
-      #modal {
-        display: none; /* El modal se oculta por defecto */
-        position: fixed; /* Posición fija para cubrir toda la pantalla */
-        z-index: 1; /* El modal debe estar por encima de todo el contenido */
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto; /* Para permitir el desplazamiento en pantallas pequeñas */
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semitransparente */
-        justify-content: center;
-        align-items: center;
-      }
-      
-      /* Estilo de la imagen dentro del modal */
-      #modal-imagen {
-        display: block; /* Asegurar que la imagen se muestre como un bloque */
-        margin: 0 auto; /* Centrar la imagen horizontalmente */
-        max-width: 90%; /* Establecer el ancho máximo de la imagen */
-        max-height: 80%; /* Establecer la altura máxima de la imagen */
-      }
-      
-      /* Estilo del botón para cerrar el modal */
-      .modal-cerrar {
-        color: #fff; /* Color del botón */
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        user-select: none;
-      }
-      
-      /* Estilo del fondo difuminado */
-      .modal-fondo {
-        filter: blur(5px); /* Aplicar efecto de desenfoque */
-        -webkit-filter: blur(5px);
-        position: fixed;
-        z-index: 0;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semitransparente */
-      }
-
-
-
-/* Elemento base */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Carril */
-::-webkit-scrollbar-track {
-  background: #29002b;
-  border-radius: 50px
-}
- 
-/* Manejador */
-::-webkit-scrollbar-thumb {
-  background: #7b00ff;
-  border-radius: 50px;
-}
-
-/* Manejador hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #8f51d1;
-}
-
-
-@media screen and (min-width: 768px) {
-
-}
-
-@media screen and (min-width: 1024px) {
-	
-
-	.header-menu {
-		background-color: #000;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 1;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		padding: 20px 10px;
-	}
-
-	.nav-header {
-		display: block;
-		width: 100%;
-	}
-	.nav-ul {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-	#inicio {
-		margin-top: 180px;
-	}
-}
-
