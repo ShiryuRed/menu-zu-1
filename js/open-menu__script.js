@@ -88,3 +88,44 @@ calzone.addEventListener("click", ()=> {
 	calzoneMenu.classList.add("calzone-menu-open");
 	menuPizzas.classList.add("abrir-pizza-calzone");
 });
+
+
+
+function calcularDistancia() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat1 = position.coords.latitude;
+      var lon1 = position.coords.longitude;
+
+      var lat2 = 18.726308113963434;
+      var lon2 = -98.454739680216;
+
+      var R = 6371; // Radio de la tierra en km
+      var dLat = toRad(lat2-lat1);
+      var dLon = toRad(lon2-lon1);
+      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      var distancia = R * c; // Distancia en km
+
+      var velocidad = 60; // Velocidad constante en km/h
+      var tiempoEnHoras = distancia / velocidad; // Tiempo en horas
+      var tiempoEnMinutos = Math.round(tiempoEnHoras * 60); // Tiempo en minutos
+
+      console.log("Distancia: " + distancia.toFixed(2) + " km");
+      console.log("Tiempo: " + tiempoEnMinutos + " minutos");
+
+      alert("Distancia: " + distancia.toFixed(2) + " km");
+      alert("Tiempo: " + tiempoEnMinutos + " minutos");
+    });
+  } else {
+    console.log("La geolocalización no está disponible en este navegador.");
+  }
+}
+
+function toRad(valor) {
+  return valor * Math.PI / 180;
+}
+
+
