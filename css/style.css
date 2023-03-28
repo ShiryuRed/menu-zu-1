@@ -97,7 +97,7 @@ img {
 .container-menu-complementos, .container-menu-bebidas,
 .container-menu-especial {
 	margin: 10px 0;
-	transition: width .3s, height .5s;
+	transition: width .3s, height .6s;
   width: 99%;
 	height: 485px;
 	overflow: hidden;
@@ -178,19 +178,17 @@ img {
 	color: #d00;
 }
 .abrir-pizza {
-	height: calc(13.64 * 420px);
+	height: calc(11.84 * 420px);
 	overflow: visible;
 }
 .abrir-pizza-calzone {
-	height: calc(15.1 * 420px);
+	height: calc(13.1 * 420px);
 }
 .abrir-hamburguesas {
 	height: calc(4 * 470px);
-	overflow: visible;
 }
 .abrir-complementos {
 	height: calc(4 * 470px);
-	overflow: visible;
 }
 .abrir-bebidas {
 	height: calc(4.3 * 470px);
@@ -198,7 +196,6 @@ img {
 }
 .abrir-especiales {
 	height: calc(4.3 * 470px);
-	overflow: visible;
 }
 
 .h4-menu {
@@ -298,7 +295,6 @@ img {
 .container-menu-complementos > ul > li:last-child,
 .container-menu-especial > ul > li:last-child {
 	grid-column: 1 / 3;
-	background: ;
 }
 
 
@@ -384,7 +380,6 @@ footer p {
 }
 
 .pizza-time-xd {
-	padding: ;
 	min-height: unset;
 	gap: 20px;
 	transition: height .5s;
