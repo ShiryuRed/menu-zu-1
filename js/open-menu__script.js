@@ -90,37 +90,55 @@ calzone.addEventListener("click", ()=> {
 });
 
 
+const btnPizzaDis = document.querySelector(".btn-pizza-time");
+const deliveryContainer = document.querySelector(".pizza-time-xd")
+let timeConfirm = true;
 
 function calcularDistancia() {
-  if (navigator.geolocation) {
+    btnPizzaDis.classList.add("animation-click-pizza");
+	setTimeout(function(){
+	     btnPizzaDis.classList.remove("animation-click-pizza");
+	}, 400); 
+  if (navigator.geolocation && timeConfirm == true)  {
+    timeConfirm = false;
     navigator.geolocation.getCurrentPosition(function(position) {
-      var lat1 = position.coords.latitude;
-      var lon1 = position.coords.longitude;
+      let lat1 = position.coords.latitude;
+      let lon1 = position.coords.longitude;
 
-      var lat2 = 18.726308113963434;
-      var lon2 = -98.454739680216;
+      let lat2 = 18.726308113963434;
+      let lon2 = -98.454739680216;
 
-      var R = 6371; // Radio de la tierra en km
-      var dLat = toRad(lat2-lat1);
-      var dLon = toRad(lon2-lon1);
-      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+      let R = 6371; // Radio de la tierra en km
+      let dLat = toRad(lat2-lat1);
+      let dLon = toRad(lon2-lon1);
+      let a = Math.sin(dLat/2) * Math.sin(dLat/2) +
               Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
               Math.sin(dLon/2) * Math.sin(dLon/2);
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-      var distancia = R * c; // Distancia en km
+      let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      let distancia = R * c; // Distancia en km
 
-      var velocidad = 60; // Velocidad constante en km/h
-      var tiempoEnHoras = distancia / velocidad; // Tiempo en horas
-      var tiempoEnMinutos = Math.round(tiempoEnHoras * 60); // Tiempo en minutos
+      let velocidad = 40; // Velocidad constante en km/h
+      let tiempoEnHoras = distancia / velocidad; // Tiempo en horas
+      let tiempoEnMinutos = Math.round(tiempoEnHoras * 60); // Tiempo en minutos
+      tiempoEnMinutos = tiempoEnMinutos + 15;
 
-      console.log("Distancia: " + distancia.toFixed(2) + " km");
-      console.log("Tiempo: " + tiempoEnMinutos + " minutos");
+      deliveryContainer.classList.add("delivery-pizza-open");
+      deliveryContainer.classList.remove("delivery-pizza-close");
+      setTimeout(function() {
+      	showDeliveryTime();
+      },1);
 
-      alert("Distancia: " + distancia.toFixed(2) + " km");
-      alert("Tiempo: " + tiempoEnMinutos + " minutos");
+	function showDeliveryTime() {
+	        let newHtmlCode = `
+	            <h2 class="text-focus-in">Su pedido llegaría en:</h2>
+				<p class="pizza-info-time text-focus-in"> ${tiempoEnMinutos} minutos</p>`;
+	        deliveryContainer.innerHTML += newHtmlCode;
+	}
+
+
     });
   } else {
-    console.log("La geolocalización no está disponible en este navegador.");
+    return;
   }
 }
 
@@ -128,4 +146,10 @@ function toRad(valor) {
   return valor * Math.PI / 180;
 }
 
+/*
+      console.log("Distancia: " + distancia.toFixed(2) + " km");
+      console.log("Tiempo: " + tiempoEnMinutos + " minutos");
+
+      alert("Distancia: " + distancia.toFixed(2) + " km");
+      alert("Tiempo: " + tiempoEnMinutos + " minutos");*/
 
