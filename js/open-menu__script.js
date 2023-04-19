@@ -1,4 +1,4 @@
-
+document.cookie = "cookieName=cookieValue; SameSite=Lax";
 
 const menuContainer = document.querySelector(".menu-container");
 
@@ -146,6 +146,21 @@ function toRad(valor) {
   return valor * Math.PI / 180;
 }
 
+const botonesOrdenar = document.querySelectorAll('.btn-ordenar-item');
+let informacionSeleccionada = '';
+
+for (let i = 0; i < botonesOrdenar.length; i++) {
+  const boton = botonesOrdenar[i];
+  boton.addEventListener('click', function() {
+    informacionSeleccionada = boton.value;
+	let urlPr = `https://api.whatsapp.com/send?phone=522441027688&text=Hola%20me%20puede%20enviar%20una%20${ informacionSeleccionada}%20por%20favor?`
+	window.open(urlPr);
+  });
+}
+
+function redirigir() {
+	let pizz = "holaquehace[rrp"
+}
 /*
       console.log("Distancia: " + distancia.toFixed(2) + " km");
       console.log("Tiempo: " + tiempoEnMinutos + " minutos");

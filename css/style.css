@@ -92,13 +92,14 @@ img {
 	display: grid;
 	transform: scale(1);
 	transition: transform .4s;
+	margin: auto;
 }
 .container-menu-pizzas, .container-menu-hamburguesas, 
 .container-menu-complementos, .container-menu-bebidas,
 .container-menu-especial {
-	margin: 10px 0;
+	margin: 10px auto;
 	transition: width .3s, height .6s;
-  width: 99%;
+  	width: 99%;
 	height: 485px;
 	overflow: hidden;
 	display: flex;
@@ -178,11 +179,11 @@ img {
 	color: #d00;
 }
 .abrir-pizza {
-	height: calc(11.84 * 420px);
+	height: calc(14.9 * 420px);
 	overflow: visible;
 }
 .abrir-pizza-calzone {
-	height: calc(13.1 * 420px);
+	height: calc(16.2 * 420px);
 }
 .abrir-hamburguesas {
 	height: calc(4 * 470px);
@@ -298,7 +299,21 @@ img {
 }
 
 
+.btn-ordenar-item {
+	color: #fff;
+	background: #f22;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 10%;
+	transition: transform .3s, background .4s;
+}
+.btn-ordenar-item:active {
+	transform: scale(.8);
+}
 
+.ico-ordenar {
+	margin: 0px 10px; 
+}
 
 
 .close-menu {
@@ -374,7 +389,7 @@ footer p {
 }
 
 
-.fa-whatsapp, .fa-facebook {
+.ico-info {
 	margin: 10px;
 	font-size: 40px;
 }
@@ -595,10 +610,7 @@ footer p {
 
 
 
-
-
-
-
+}
 
 
 
