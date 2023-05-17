@@ -11,6 +11,7 @@
    <link rel="icon" href="multimedia/images/Zuizoz-logo-01 - copia.ico">
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css">
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link rel="stylesheet" type="text/css" href="css/normalize.css">
    <link rel="stylesheet" href="css/icofont.min.css">
@@ -41,9 +42,9 @@
 		</nav> 
 	</header>
 	<main>
-   	<div class="img-logo-container">
+   		<div class="img-logo-container">
    		<img class="img-logo" src="multimedia/images/Zuizoz-logo-01.png" title="img-logo">
-   	</div>
+   		</div>
 		<section id="inicio" class="li-menu-item">
 			<div class="inicio">
 				<p>En nuestro restaurante ofrecemos una amplia variedad de alimentos.</p>
@@ -53,6 +54,55 @@
 				<input type="button" value="Ver menu como carta" class="btn-switch-menu">
 				</input>
 			</div>
+		</section>
+		<section>
+			<div class="carousel">
+				<div class="carousel-container">
+					<button aria-label="Anterior" class="carousel-anterior">
+						<i class="fas fa-chevron-left"></i>
+					</button>
+
+					<div class="carousel-list">
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/pizza-especial.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/calzone.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/pizza-italiana.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/pizza-pepperoni.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/pizza-especial.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/calzone.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/pizza-italiana.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+						<div class="carousel-item">
+							<img src="multimedia/images/menu-images/pizza/pizza-pepperoni.jpg" alt="l">
+							<p>Texto descriptivo</p>
+						</div>
+					</div>
+
+					<button aria-label="Anterior" class="carousel-siguiente">
+						<i class="fas fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+			<div role="tablist" class="carousel-indicadores"></div>
 		</section>
 		<div class="pizza-time-xd li-menu-item delivery-pizza-close ">
 			<button class="btn-pizza-time animation-pulsate-pizza" onclick="calcularDistancia()">Calcular tiempo de envio (aproximado)</button>
@@ -488,13 +538,14 @@
 			<br>
 			<p>por correo electrónico a @gmail.com</p>
 			<br>
-			<p>visitando nuestra pagina de facebook: <br><a href="https://es-la.facebook.com/" target="_BLANK" aria-label="facebook"><i class="fa-brands fa-facebook ico-info"></i></a></p>
+			<p>visitando nuestra pagina de facebook: <br><a href="https://www.facebook.com/people/Zuizoz-Pizza/100054504998077/?mibextid=LQQJ4d" target="_BLANK" aria-label="facebook"><i class="fa-brands fa-facebook ico-info"></i></a></p>
 			<br>
-			<p>o enviandonos un mensaje a whatsapp por este link : <br><a href="https://api.whatsapp.com/send?phone=522441027688&text=Hola%20tiene%20servicio?" target="_BLANK"  aria-label="whatsapp"><i class="fa-brands fa-whatsapp ico-info"></i></a></p>
+			<p>o enviandonos un mensaje a whatsapp por este link : <br><a href="https://api.whatsapp.com/send?phone=522441027688&text=Hola,%20tiene%20servicio?" target="_BLANK"  aria-label="whatsapp"><i class="fa-brands fa-whatsapp ico-info"></i></a></p>
 		</section>
 	</main>
     <script src="js/modal-script.js"></script>
 <!----======== JS ======== -->
+   <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
    <script src="js/open-menu__script.js"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script>

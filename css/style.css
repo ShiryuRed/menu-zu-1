@@ -412,8 +412,6 @@ footer p {
 	border: none;
 	border-radius: 10px;
 }
-
-
 .animation-pulsate-pizza {
 	padding: 10px;
 	-webkit-animation: heartbeat 5s ease-in-out infinite both;
@@ -612,7 +610,50 @@ footer p {
 
 }
 
+/*////////////////////////////////////////////////////////////////////////////*/
+.carousel {
+	position: relative;
+	height: 300px;
+}
+.carousel-container {
+	position: relative;
+	height: 100%;
+}
+.carousel-anterior,
+.carousel-siguiente {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	cursor: poninter;
+	top: calc(50% - 35px);
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20;
+	position: absolute;
+	background: #0008;
+	border-radius: 30%;
+	cursor: pointer;
+}
+.carousel-anterior {
+	z-index: 10;
+	top: 40%;
+}
+.carousel-siguiente {
+	right: 0;
+	top: 40%;
+}
 
+.carousel-list {
+	display: flex;
+	height: 100%;
+}
+.carousel-item {
+	margin: 2px 10px;
+}
+/*////////////////////////////////////////////////////////////////////////////*/
 
 
 

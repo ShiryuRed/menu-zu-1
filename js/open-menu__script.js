@@ -129,13 +129,15 @@ function calcularDistancia() {
       },1);
 
 	function showDeliveryTime() {
+		btnPizzaDis.setAttribute("hidden", "true")
+		setTimeout(function(){
 	        let newHtmlCode = `
 	            <h2 class="text-focus-in">Su pedido llegaría en:</h2>
+				<p class="text-focus-in">(Aproximadamente)</p>
 				<p class="pizza-info-time text-focus-in"> ${tiempoEnMinutos} minutos</p>`;
 	        deliveryContainer.innerHTML += newHtmlCode;
+		},200)
 	}
-
-
     });
   } else {
     return;
