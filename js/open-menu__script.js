@@ -120,7 +120,7 @@ function calcularDistancia() {
       let velocidad = 40; // Velocidad constante en km/h
       let tiempoEnHoras = distancia / velocidad; // Tiempo en horas
       let tiempoEnMinutos = Math.round(tiempoEnHoras * 60); // Tiempo en minutos
-      tiempoEnMinutos = tiempoEnMinutos + 15;
+      tiempoEnMinutos = tiempoEnMinutos + 30;
 
       deliveryContainer.classList.add("delivery-pizza-open");
       deliveryContainer.classList.remove("delivery-pizza-close");
