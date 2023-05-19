@@ -82,7 +82,6 @@ img {
 }
 
 .menu-info {
-	padding: 20px;
 	margin: 10px auto;
 }
 
@@ -684,80 +683,80 @@ footer p {
 	content: "$150";
 }
 .pizza-price-gd::before {
-	content: "GD $160";
+	content: "GD $170";
 }
 .pizza-price-med::before {
-	content: "MED $140";
+	content: "MED $150";
 }
 .pizza-price-ch::before {
-	content: "CH $120";
+	content: "CH $110";
 }
 
 .hamburguesa-res-price::before {
-	content: "$60";
+	content: "$45";
 }
 .hamburguesa-pollo-price::before {
-	content: "$70";
+	content: "$45";
 }
 .estilo-suizo-price::before {
-	content: "$80";
+	content: "$55";
 }
 .hamburguesa-hawaiana-price::before {
-	content: "$70";
+	content: "$55";
 }
 .hamburguesa-doble-price::before {
-	content: "$80";
+	content: "$55";
 }
 
 .nuggets-price:before {
-	content: "$70";
+	content: "$60";
 }
 .wings-price:before {
-	content: "$70";
+	content: "$60";
 }
 .aros-price:before {
-	content: "$70";
+	content: "$55";
 }
 .fries-price:before {
-	content: "$70";
+	content: "$40";
 }
 .nugget-fries-price:before {
-	content: "$70";
+	content: "$55";
 }
 
 .coca-cola-600-price:before {
-	content: "$70";
+	content: "$20";
 }
 .jarritos-600-price:before {
-	content: "$70";
+	content: "$20";
 }
 .boing-price:before {
-	content: "$70";
+	content: "$15";
 }
 .coca-cola-2lts-price:before {
-	content: "$70";
+	content: "$42";
 }
 .jarritos-2lts-price:before {
-	content: "$70";
+	content: "$38";
 }
 .cafe-colombia-price:before {
-	content: "$70";
+	content: "$";
 }
 
 .sub-price:before {
-	content: "$70";
+	content: "$60";
 }
 .sub-italiano-price:before {
-	content: "$70";
+	content: "$60";
 }
 .hot-dog-price:before {
-	content: "$70";
+	content: "$30";
 }
 .hot-dog-toc-price:before {
-	content: "$70";
+	content: "$35";
 }
 .cheesesteak-price:before {
-	content: "$70";
+	content: "$60";
 }
 /* Price */
 
