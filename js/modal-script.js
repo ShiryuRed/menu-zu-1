@@ -16,6 +16,8 @@
 //   modal.style.display = "none";
 // }
 
+
+
 window.addEventListener("load", function(){
     new Glider(document.querySelector('.carousel-list'), {
         slidesToShow: 1,
@@ -28,6 +30,23 @@ window.addEventListener("load", function(){
         }
     });
 });
+
+const imagenes = document.querySelectorAll('.img-menu-item');
+
+// for (let i = 0; i < imagenes.length; i++) {
+//   imagenes[i].addEventListener('click', function() {
+//     let src = imagenes.getAttribute('src');
+//     alert(src)
+//   });
+// }
+
+imagenes.forEach(imgSrc =>{
+  imgSrc.addEventListener('click', ()=>{
+      let src = imgSrc.getAttribute('src');
+  })
+})
+
+
 
 
 

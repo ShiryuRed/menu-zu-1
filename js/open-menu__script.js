@@ -1,3 +1,5 @@
+
+
 document.cookie = "cookieName=cookieValue; SameSite=Lax";
 
 const menuContainer = document.querySelector(".menu-container");
@@ -129,14 +131,32 @@ function calcularDistancia() {
       },1);
 
 	function showDeliveryTime() {
-		btnPizzaDis.setAttribute("hidden", "true")
-		setTimeout(function(){
-	        let newHtmlCode = `
-	            <h2 class="text-focus-in">Su pedido llegaría en:</h2>
-				<p class="text-focus-in">(Aproximadamente)</p>
-				<p class="pizza-info-time text-focus-in"> ${tiempoEnMinutos} minutos</p>`;
-	        deliveryContainer.innerHTML += newHtmlCode;
-		},200)
+		if(distancia < 15) {
+			btnPizzaDis.setAttribute("hidden", "true")
+			setTimeout(function(){
+				let newHtmlCode = `
+					<h2 class="text-focus-in">Su pedido llegaría en:</h2>
+					<p class="text-focus-in">(Aproximadamente)</p>
+					<p class="pizza-info-time text-focus-in"> ${tiempoEnMinutos} minutos</p>`;
+				deliveryContainer.innerHTML += newHtmlCode;
+			},200)
+		} if (distancia > 15 || distancia < 16) {
+			btnPizzaDis.setAttribute("hidden", "true")
+			setTimeout(function(){
+				let newHtmlCode = `
+					<p class="text-focus-in">Para saber si se puede entregar a su direccion por favor pregunte llamando por telefono o a nuestro whatsapp</p>
+					<p class="pizza-info-time text-focus-in">Su pedidio estaría listo en <br> (${tiempoEnMinutos} minutos)</p>`;
+				deliveryContainer.innerHTML += newHtmlCode;
+			},200) //arregla esto, no detecta la tercera opcion pipi
+		} else {
+			btnPizzaDis.setAttribute("hidden", "true")
+			setTimeout(function(){
+				let newHtmlCode = `
+					<p class="text-focus-in">Lo sentimos, no podemos llevar su pedido a ese destino</p>
+					<p class="pizza-info-time text-focus-in">Puede enviarnos un mensaje si tiene alguna duda</p>`;
+				deliveryContainer.innerHTML += newHtmlCode;
+			},200)
+		}
 	}
     });
   } else {
@@ -155,14 +175,20 @@ for (let i = 0; i < botonesOrdenar.length; i++) {
   const boton = botonesOrdenar[i];
   boton.addEventListener('click', function() {
     informacionSeleccionada = boton.value;
-	let urlPr = `https://api.whatsapp.com/send?phone=522441027688&text=Hola%20me%20puede%20enviar%20una%20${ informacionSeleccionada}%20por%20favor?`
+	let urlPr = `https://api.whatsapp.com/send?phone=522441198454&text=Hola%20me%20puede%20enviar%20una%20${ informacionSeleccionada}%20por%20favor?`
 	window.open(urlPr);
   });
 }
 
-function redirigir() {
-	let pizz = "holaquehace[rrp"
-}
+
+const loadingAnim = document.querySelector(".loading-anim");
+
+window.addEventListener('load', function() {
+	setTimeout(function() {
+		loadingAnim.classList.add('close-anim');
+	},1000)
+})
+
 /*
       console.log("Distancia: " + distancia.toFixed(2) + " km");
       console.log("Tiempo: " + tiempoEnMinutos + " minutos");
