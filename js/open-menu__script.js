@@ -175,8 +175,13 @@ for (let i = 0; i < botonesOrdenar.length; i++) {
   const boton = botonesOrdenar[i];
   boton.addEventListener('click', function() {
     informacionSeleccionada = boton.value;
-	let urlPr = `https://api.whatsapp.com/send?phone=522441198454&text=Hola%20me%20puede%20enviar%20una%20${ informacionSeleccionada}%20por%20favor?`
-	window.open(urlPr);
+	if(informacionSeleccionada == 'calzone') {
+		let urlPr = `https://api.whatsapp.com/send?phone=522441198454&text=Hola%20me%20puede%20enviar%20un%20${ informacionSeleccionada}%20por%20favor?`
+		window.open(urlPr);
+	} else {
+		let urlPr = `https://api.whatsapp.com/send?phone=522441198454&text=Hola%20me%20puede%20enviar%20una%20${ informacionSeleccionada}%20por%20favor?`
+		window.open(urlPr);
+	}
   });
 }
 
